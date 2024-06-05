@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <h1>Latest Posts</h1>
+    <hr />
+    {% for post in posts %}
+    <div>
+        <h1><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h1>
+        <div><small>Published {{ post.created }}, Last updated on {{ post.modified }}</small></div>
+        <!-- <div><small></small></div> -->
+        <p>{{ post.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
