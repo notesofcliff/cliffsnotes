@@ -1,0 +1,3 @@
+# CliffsNotes
+
+A blogging platform.
